@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add a descriptive title for accessibility -->
+  <title>Atlas & Lens - Contact & Testimonials</title>
   <!-- Bootstrap Styles -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
@@ -50,8 +52,9 @@
           <div class="testimonial-card testimonial-1">
             <div class="testimonial-number">Testimonial 1</div>
             <div class="testimonial-image">
+              <!-- Add alt text for accessibility -->
               <img
-                src="https://images.pexels.com/photos/265856/pexels-photo-265856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+                src="https://images.pexels.com/photos/265856/pexels-photo-265856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portrait of Marie Dubois">
             </div>
             <div class="testimonial-content">
               <p class="testimonial-text">"The photos of our wedding are magnificent. Each moment was captured
@@ -87,8 +90,9 @@
               <p class="testimonial-location">Dubai, United Arab Emirates</p>
             </div>
             <div class="testimonial-image">
+              <!-- Add alt text for accessibility -->
               <img
-                src="https://images.pexels.com/photos/265856/pexels-photo-265856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+                src="https://images.pexels.com/photos/265856/pexels-photo-265856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portrait of Fatima & Mohammed">
             </div>
           </div>
         </div>
@@ -103,45 +107,54 @@
         <!-- Contact Form -->
         <div class="contact-form">
           <h2 class="text-center mb-5">Reach out</h2>
+          <!-- Label for Name -->
           <div class="form-group mb-4">
+            <label for="name">Full Name *</label>
             <input type="text" class="form-control" id="name" placeholder="Enter your full name *">
           </div>
 
+          <!-- Label for Email -->
           <div class="form-group mb-4">
+            <label for="email">Email *</label>
             <input type="email" class="form-control" id="email" placeholder="example@email.com *">
           </div>
 
+          <!-- Label for Session Type (Radio group) -->
           <div class="form-group mb-4">
-            <p class="small-heading">SESSION TYPE *</p>
-            <div class="radio-options">
+            <p class="small-heading" id="sessionTypeLabel">SESSION TYPE *</p>
+            <div class="radio-options" role="radiogroup" aria-labelledby="sessionTypeLabel">
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="sessionType" id="wedding" value="Wedding">
-                <span class="radio-text">Wedding</span>
+                <label class="form-check-label" for="wedding">Wedding</label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="sessionType" id="engagement" value="Engagement">
-                <span class="radio-text">Engagement</span>
+                <label class="form-check-label" for="engagement">Engagement</label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="sessionType" id="editorial" value="Editorial">
-                <span class="radio-text">Editorial</span>
+                <label class="form-check-label" for="editorial">Editorial</label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="sessionType" id="lifestyle" value="Lifestyle">
-                <span class="radio-text">Lifestyle</span>
+                <label class="form-check-label" for="lifestyle">Lifestyle</label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="sessionType" id="other" value="Other">
-                <span class="radio-text">Other</span>
+                <label class="form-check-label" for="other">Other</label>
               </div>
             </div>
           </div>
 
+          <!-- Label for Other Info -->
           <div class="form-group mb-4">
+            <label for="otherInfo">Other Session Type</label>
             <input type="text" class="form-control" id="otherInfo" placeholder="Please describe your session type">
           </div>
 
+          <!-- Label for Select (How did you hear about me?) -->
           <div class="form-group mb-4">
+            <label for="hearAbout">How did you hear about me?</label>
             <select class="form-select" id="hearAbout">
               <option selected disabled>How did you hear about me?</option>
               <option value="google">Google</option>
@@ -152,13 +165,19 @@
             </select>
           </div>
 
+          <!-- Label for Message -->
           <div class="form-group mb-4">
+            <label for="message">Message *</label>
             <textarea class="form-control" id="message" rows="5"
               placeholder="Tell me more about what you're looking for... *"></textarea>
           </div>
 
           <div class="text-center mt-4">
-            <button type="submit" class="btn btn-outline-dark"> <i class="bi bi-send"></i> </button>
+            <!-- Accessible button: add aria-label and visible text for screen readers -->
+            <button type="submit" class="btn btn-outline-dark" aria-label="Send message">
+              <span class="visually-hidden">Send message</span>
+              <i class="bi bi-send" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
       </div>
